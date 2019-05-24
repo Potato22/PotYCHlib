@@ -1,0 +1,13 @@
+$(function(){
+    $('.buttondropdown').click(function(){
+        $('.buttondropdown').toggleClass('buttonDropActive');
+        $('.dropcontents').toggleClass('dropperActive');
+        $('.block').toggleClass('blockActive');
+    })
+    $('.block').click(function(){
+        $('.block').removeClass('blockActive');
+        $('.buttondropdown').removeClass('buttonDropActive');
+        $('.dropcontents').removeClass('dropperActive');
+        $('.block').removeClass('blockActive');
+    })
+})

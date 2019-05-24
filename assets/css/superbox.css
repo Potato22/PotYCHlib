@@ -1,0 +1,142 @@
+.startBox {
+  margin: 1rem 1.5rem;
+}
+
+.categoryHr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.lineHr {
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background: rgb(173,173,173);
+}
+
+.titleCategory {
+  position: absolute;
+  background: white;
+  color: rgb(132,132,132);
+  padding: 0 1rem;
+  font-family: 'Roboto Condensed';
+}
+
+.cssgrid-mainBox {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1rem;
+  justify-content: space-around;
+}
+
+@media (max-width: 690px) {
+  .cssgrid-mainBox {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 465px) {
+  .cssgrid-mainBox {
+    grid-template-columns: auto;
+  }
+}
+
+.gridItem {
+  background: white;
+  box-shadow: rgba(0,0,0,0.12) 0 0 12px;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imageThumb {
+  /*max-width: 200px;*/
+  max-height: 200px;
+  align-self: center;
+  /*position: absolute;*/
+  transition: all 0.4s cubic-bezier(.19,.01,0,1.22);
+  /*transition-delay: 0.3s;*/
+}
+
+.imageBubble {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: rgba(0,0,0,0.12) 0 0 12px;
+  color: rgb(90,90,90);
+  font-family: 'Roboto';
+  width: 200px;
+  transform: translate(0,180px);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(.19,.01,0,1.22);
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0.2s;
+  z-index: 10;
+  margin-bottom: 5rem;
+}
+
+.imageThumb:hover {
+  transform: scale(1.2);
+  transition-delay: 0s;
+}
+
+.gridItem:hover .imageBubble {
+  transform: translate(0, 210px);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+/* Test */
+
+/* test */
+
+.imageDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.bubbleTitle {
+  font-size: 1.3rem;
+}
+
+.bubblePrice {
+  font-size: 1rem;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.bubbleDesc {
+  margin-top: 1rem;
+  color: rgb(168,168,168);
+}
+
+.bubbleCompatibility {
+  padding-left: 20px;
+  color: rgb(118,118,118);
+}
+
+.purchase {
+  background: rgb(46,204,46);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  transition: all 0.2s;
+}
+
+.purchase:hover {
+  background: rgb(66,226,66);
+}
+

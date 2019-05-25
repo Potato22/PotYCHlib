@@ -1,0 +1,30 @@
+.loadblock {
+  background: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  position: fixed;
+  /*visibility: hidden;*/
+}
+
+.outer {
+  width: 70px;
+  height: 70px;
+  /*border: black 2px;*/
+  border-radius: 50%;
+  animation: spinouter 2s cubic-bezier(.08,.22,0,.99) infinite;
+  transition: border 0.2s cubic-bezier(.66,.02,.88,.32);
+}
+
+.inner {
+  width: 30px;
+  height: 30px;
+  border: solid white 1px;
+  position: absolute;
+  border-radius: 50%;
+  animation: spinouter 2s cubic-bezier(.08,.22,0,.99) 1.5s infinite;
+}
+
